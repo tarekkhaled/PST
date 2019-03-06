@@ -1,6 +1,5 @@
 <?php
 define("DB_HOST", 'localhost');
 define("DB_USER", 'root');
-define("DB_PASS", '');
-define("DB_NAME", 'u286740372_apec');
-
+define("DB_PASS", 'zeez3020');
+define("DB_NAME", 'apec mega');
