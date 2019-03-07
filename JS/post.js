@@ -36,6 +36,10 @@ submitBtn.addEventListener('click', (e) => {
 
 
 let time = document.querySelector(".time");
+let minutes = document.querySelector(".minutes");
+let seconds = document.querySelector(".seconds");
+let minHead = document.getElementById("min-head");
+let secHead = document.getElementById("sec-head");
 
 // timer
 
@@ -51,7 +55,36 @@ let timerId = setInterval(function () {
         clearInterval(timerId);
         //doSomething();
     } else {
-        time.textContent = min + " : " + sec;
+        if (sec < 10) {
+            if (min < 10) {
+                minutes.textContent = "0" + min;
+                seconds.textContent = "0" + sec;
+                minHead.textContent = "0" + min;
+                secHead.textContent = "0" + sec;
+            } else {
+                minutes.textContent = min;
+                seconds.textContent = "0" + sec;
+                minHead.textContent = min;
+                secHead.textContent = "0" + sec;
+            }
+        } else if (min < 10) {
+            if (sec < 10) {
+                minutes.textContent = "0" + min;
+                seconds.textContent = "0" + sec;
+                minHead.textContent = "0" + min;
+                secHead.textContent = "0" + sec;
+            } else {
+                minutes.textContent = "0" + min;
+                seconds.textContent = sec;
+                minHead.textContent = "0" + min;
+                secHead.textContent = sec;
+            }
+        } else {
+            minutes.textContent = min;
+            seconds.textContent = sec;
+            minHead.textContent = min;
+            secHead.textContent = sec;
+        }
     }
 
 }, 1000); //1000ms. = 1sec.

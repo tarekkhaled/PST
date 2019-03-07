@@ -53,6 +53,10 @@ body {
   font-weight: 900;
 }
 
+.content #time-head {
+  font-weight: 900;
+}
+
 .questions {
   background: white;
   border-radius: 1em;
@@ -177,16 +181,49 @@ body {
 
 #timer {
   position: fixed;
-  top: 5%;
-  left: 0;
-  background: green;
-  width: 150px;
-  height: 150px;
-  font-size: 2.5em;
+  top: 0%;
+  left: 0%;
+  background: #111;
+  width: 100%;
+  font-size: 2em;
   text-align: center;
-  border-radius: 2em;
   color: white;
   padding: .3em 0;
   visibility: hidden;
+}
+
+#timer h1 {
+  color: #202020;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#timer #clockdiv {
+  font-family: sans-serif;
+  color: #fdfbfb;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 15px;
+}
+
+#timer #clockdiv > div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #080808;
+  display: inline-block;
+}
+
+#timer #clockdiv div > span {
+  padding: 15px;
+  border-radius: 3px;
+  background: #770202;
+  display: inline-block;
+}
+
+#timer .smalltext {
+  padding-top: 5px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -51,6 +51,10 @@ body {
         font-size: 4em;
         font-weight: 900;
     }
+
+    #time-head {
+        font-weight: 900;
+    }
 }
 
 .questions {
@@ -181,16 +185,49 @@ body {
 
 #timer {
     position: fixed;
-    top: 5%;
-    left: 0;
+    top: 0%;
+    left: 0%;
     // background: #4b0303;
-    background: green;
-    width: 150px;
-    height: 150px;
-    font-size: 2.5em;
+    background: #111;
+    width: 100%;
+    font-size: 2em;
     text-align: center;
-    border-radius: 2em;
     color: white;
     padding: .3em 0;
     visibility: hidden;
+
+    h1 {
+        color: rgb(32, 32, 32);
+        font-weight: 100;
+        font-size: 40px;
+        margin: 40px 0px 20px;
+    }
+
+    #clockdiv {
+        font-family: sans-serif;
+        color: rgb(253, 251, 251);
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #clockdiv>div {
+        padding: 10px;
+        border-radius: 3px;
+        background: rgb(8, 8, 8);
+        display: inline-block;
+    }
+
+    #clockdiv div>span {
+        padding: 15px;
+        border-radius: 3px;
+        background: rgb(119, 2, 2);
+        display: inline-block;
+    }
+
+    .smalltext {
+        padding-top: 5px;
+        font-size: 12px;
+    }
 }
