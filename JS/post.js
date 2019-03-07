@@ -21,6 +21,16 @@ submitBtn.addEventListener('click', (e) => {
     }
     alert(`Your score is ${score} out of 20`);
 
+    //  AJAX REQUEST
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'includes/addscore.php?score=' + score, true);
+    this.responseText
+    xhr.onload = function () {
+        if (this.status == 200) {
+            window.location.href = "http://www.apec-eg.com";
+        }
+    }
+    xhr.send();
 
 })
 
@@ -49,7 +59,6 @@ let timer_div = document.getElementById("timer");
 window.addEventListener('scroll', (e) => {
     let scrollPosition = window.scrollY;
     if (scrollPosition > 700) {
-        console.log("zeez");
         timer_div.style.visibility = "visible";
     } else {
         timer_div.style.visibility = "hidden";
