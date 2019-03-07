@@ -43,7 +43,7 @@ let secHead = document.getElementById("sec-head");
 
 // timer
 
-let countdown = 30 * 60 * 1000;
+let countdown = 0.1 * 60 * 1000;
 let timerId = setInterval(function () {
     countdown -= 1000;
     let min = Math.floor(countdown / (60 * 1000));
@@ -54,6 +54,28 @@ let timerId = setInterval(function () {
         alert("30 min!");
         clearInterval(timerId);
         //doSomething();
+        for (let i = 0; i < inputs.length; i++) { //loop over all the inputs
+            if (inputs[i].type == "radio" && inputs[i].checked) { // select only the inputs that's type is equal to radio and if this radio is also checked or not by the user
+                if (answers[choice].getAttribute('value') == inputs[i].getAttribute("class")) { //check whether the answer is equal what the user selected , if yes increment the score
+                    score++;
+
+                }
+                choice++;
+
+            }
+        }
+        alert(`Your score is ${score} out of 20`);
+
+        //  AJAX REQUEST
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'includes/addscore.php?score=' + score, true);
+        this.responseText
+        xhr.onload = function () {
+            if (this.status == 200) {
+                window.location.href = "http://www.apec-eg.com";
+            }
+        }
+        xhr.send();
     } else {
         if (sec < 10) {
             if (min < 10) {
