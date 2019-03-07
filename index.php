@@ -74,7 +74,9 @@ $numbers = createRandArray();
 
     <div class="submit-btn"><button type="submit" value="submit" class="btn" id="submit">Submit</button></div>
 
-
+    <div id="timer"><i class="fas fa-stopwatch"></i>
+        <p class="time">30:00</p>
+    </div>
 
 </div>
 

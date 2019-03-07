@@ -23,3 +23,36 @@ submitBtn.addEventListener('click', (e) => {
 
 
 })
+
+
+let time = document.querySelector(".time");
+
+// timer
+
+let countdown = 30 * 60 * 1000;
+let timerId = setInterval(function () {
+    countdown -= 1000;
+    let min = Math.floor(countdown / (60 * 1000));
+    //let sec = Math.floor(countdown - (min * 60 * 1000));  // wrong
+    let sec = Math.floor((countdown - (min * 60 * 1000)) / 1000); //correct
+
+    if (countdown <= 0) {
+        alert("30 min!");
+        clearInterval(timerId);
+        //doSomething();
+    } else {
+        time.textContent = min + " : " + sec;
+    }
+
+}, 1000); //1000ms. = 1sec.
+let timer_div = document.getElementById("timer");
+window.addEventListener('scroll', (e) => {
+    let scrollPosition = window.scrollY;
+    if (scrollPosition > 700) {
+        console.log("zeez");
+        timer_div.style.visibility = "visible";
+    } else {
+        timer_div.style.visibility = "hidden";
+    }
+
+});
