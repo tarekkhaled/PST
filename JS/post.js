@@ -43,7 +43,7 @@ let secHead = document.getElementById("sec-head");
 
 // timer
 
-let countdown = 0.1 * 60 * 1000;
+let countdown = 30 * 60 * 1000;
 let timerId = setInterval(function () {
     countdown -= 1000;
     let min = Math.floor(countdown / (60 * 1000));

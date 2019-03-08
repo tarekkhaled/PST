@@ -21,7 +21,7 @@ $numbers = createRandArray();
     <div class="content">
         <h1 class="apec-h1">APEC</h1>
         <h1 class="w-h1">Welcome to the Pst</h1>
-        <h1 class="q-h1">20 questions in <span id="time-head"> <span id="min-head"></span>min: <span id="sec-head"></span>seconds ..</span></h1>
+        <h1 class="q-h1">20 questions in <span id="time-head"> <span id="min-head"></span> min: <span id="sec-head"></span> seconds ..</span></h1>
         <h1 class="c-h1">Can you do it ?</h1>
     </div>
 
@@ -47,7 +47,7 @@ $numbers = createRandArray();
                     <input type="hidden" id="serial" value="<?php echo $zeez[$numbers[$i]]['correct_answer']; ?>">
                     <h1> <?php echo $zeez[$numbers[$i]]['question_name']; ?></h1>
                 </div>
-                <div class="radio-group1">
+                <div class="radio-group">
                     <div class="row">
                         <input type="radio" name="job" id="engineer<?php echo $i; ?>" class="1">
                         <label for="engineer<?php echo $i; ?>"> <?php echo $zeez[$numbers[$i]]['answer1']; ?> </label>
@@ -75,8 +75,6 @@ $numbers = createRandArray();
     <div class="submit-btn"><button type="submit" value="submit" class="btn" id="submit">Submit</button></div>
 
     <div id="timer">
-        <!-- <i class="fas fa-stopwatch"></i>
-        <p class="time">30:00</p> -->
         <div id="clockdiv">
             <div>
                 <span class="minutes">30</span>

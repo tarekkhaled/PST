@@ -18,6 +18,7 @@ class Database
     private function connect()
     {
         $this->link = new mysqli($this->host, $this->username, $this->password, $this->db_name);
+
         if (!$this->link) {
             $this->error = "connection Failed: " . $this->link->connect_error;
             return false;
@@ -40,11 +41,5 @@ class Database
             die('Error : (' . $this->link->error . ') ' . $this->link->error);
         }
     }
-
-
-
 }
-
-
-
-?>
+ 

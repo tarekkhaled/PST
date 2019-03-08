@@ -12,3 +12,8 @@ SET user_score = $score
 WHERE id = 1; ";
 
 $db->insert_query($query);
+
+
+
+
+ 
