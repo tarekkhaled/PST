@@ -545,38 +545,8 @@ body {
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1500px) {
-  .content .apec-h1 {
-    font-size: 3.3em;
-  }
 
-  .content .w-h1 {
-    margin-bottom: 1em;
-    font-size: 3.5em;
-  }
 
-  .content .q-h1 {
-    font-size: 2em;
-    letter-spacing: .3em;
-    margin-bottom: 2.5em;
-  }
-
-  .content .c-h1 {
-    font-size: 4em;
-    font-weight: 900;
-  }
-
-  .content #time-head {
-    letter-spacing: .1em;
-    font-size: 1.4em;
-  }
-
-  .question-box h1 {
-    font-size: 3.5em;
-  }
-
-  .question-box .radio-group {
-    font-size: 2.4em;
-  }
 
   .customRadio input[type="radio"]+label:before {
     top: 15px;
@@ -586,36 +556,22 @@ body {
     top: 20px;
   }
 
-  .question-no {
-    padding-top: .1em;
-    font-size: 1.7em;
+
+  .question-box h1 {
+    font-size: 2.7em;
+    margin-bottom: 1em;
   }
 
-  #timer {
-    width: 100%;
-    height: 150px;
-    font-size: 2em;
-    text-align: center;
-    color: white;
-    padding: .3em 0;
-    visibility: hidden;
+  .question-box .radio-group {
+    font-size: 1.6em;
   }
 
-  #timer #clockdiv {
-    font-size: 30px;
+  .questions {
+    width: 75%;
   }
 
-  #timer #clockdiv>div {
-    padding: 8px;
-  }
 
-  #timer #clockdiv div>span {
-    padding: 12px;
-  }
 
-  #timer .smalltext {
-    font-size: 20px;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
